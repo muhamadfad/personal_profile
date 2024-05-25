@@ -154,7 +154,12 @@
                           Resume
                         </div>
                       </a>
-                      <a href="" class="" style="text-decoration: none">
+                      <a
+                        id="downloadButton"
+                        href="#"
+                        class=""
+                        style="text-decoration: none"
+                      >
                         <div
                           class="py-1 px-3 rounded-4 bg-linear-2 ms-2 text-white fw-medium shadow-lg"
                         >
@@ -769,4 +774,14 @@
   burger.addEventListener("click", function () {
     wrapper.classList.replace("navWrapper", "navWrapper-scroll");
   });
+</script>
+<script>
+  document
+    .getElementById("downloadButton")
+    .addEventListener("click", function () {
+      var link = document.createElement("a");
+      link.href = "file/CV.pdf"; // Ganti dengan path yang benar ke file PDF Anda
+      link.download = "file.pdf"; // Nama file yang akan diunduh
+      link.click();
+    });
 </script>
